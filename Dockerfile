@@ -1,6 +1,6 @@
 # Use the official PHP 7.4 image.
 # https://hub.docker.com/_/php
-FROM php:7.4-apache
+FROM php:8.0-apache
 
 # Copy local code to the container image.
 COPY index.php /var/www/html/
@@ -21,4 +21,4 @@ RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 #RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - \
     #&& apt-get install -y nodejs
 
-#CMD ["php", "-S", "0.0.0.0:80"]
+CMD ["php", "-S", "0.0.0.0:80"]
